@@ -1,0 +1,28 @@
+html
+  head
+    link(rel="stylesheet" href='style.css')
+    title Ticket List
+  body
+    ul
+      li
+        a(href='/create') Create new ticket
+      li
+        a(href='/logout') Logout
+    if tickets.length > 0
+      .table
+        .table-head
+          .table-row
+            .table-cell Title
+            .table-cell Description
+            .table-cell Creator
+        .table-body
+          each ticket in tickets
+            .table-row
+              .table-cell
+                = ticket.title
+              .table-cell
+                = ticket.description
+              .table-cell
+                = ticket.creator
+    else
+      p No tickets

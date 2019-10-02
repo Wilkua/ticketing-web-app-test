@@ -1,0 +1,31 @@
+{
+  "name": "ticketing-web-app-test",
+  "version": "1.0.0",
+  "description": "Web app testing",
+  "main": "server.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilkua/ticketing-web-app-test.git"
+  },
+  "author": "William Drescher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilkua/ticketing-web-app-test/issues"
+  },
+  "homepage": "https://github.com/wilkua/ticketing-web-app-test#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "luxon": "^1.19.3",
+    "morgan": "^1.9.1",
+    "nedb": "^1.8.0",
+    "on-finished": "^2.3.0",
+    "pug": "^2.0.4",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
