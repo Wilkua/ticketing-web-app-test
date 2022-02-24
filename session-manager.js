@@ -45,7 +45,11 @@ module.exports = function (sessionDir) {
       for (line of lines) {
         if (line === undefined) continue;
         const comps = line.split('=');
+        try {
         req.session[comps[0]] = JSON.parse(comps[1]);
+        } catch (e) {
+          continue;
+        }
       }
 
       next();

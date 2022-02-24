@@ -12,17 +12,24 @@ html
       .table
         .table-head
           .table-row
-            .table-cell Title
+            .table-cell #
+            .table-cell Summary
             .table-cell Description
             .table-cell Creator
         .table-body
           each ticket in tickets
             .table-row
               .table-cell
-                = ticket.title
+                = ticket.ticket_num
+              .table-cell
+                = ticket.summary
               .table-cell
                 = ticket.description
-              .table-cell
-                = ticket.creator
+              if ticket.name
+                .table-cell
+                  = ticket.name
+              else
+                .table-cell
+                  = ticket.username
     else
       p No tickets
